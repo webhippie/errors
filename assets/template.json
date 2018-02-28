@@ -1,4 +1,4 @@
 {
-  "status": "{{.Status}}"
+  "status": "{{.Status}}",
   "error": "{{.Error}}"
 }
