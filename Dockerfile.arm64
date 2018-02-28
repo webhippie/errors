@@ -17,4 +17,4 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /etc/mime.types /etc/
 
 COPY assets/ /usr/share/errors/
-COPY dist/binaries/errors-*-linux-arm-64 /usr/bin/errors
+COPY dist/binaries/errors-*-linux-arm64 /usr/bin/errors
