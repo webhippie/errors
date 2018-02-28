@@ -19,11 +19,11 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 
 ## Development
 
-Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). As this project relies on vendoring of the dependencies you have to use a Go version `>= 1.6`. It is also possible to just simply execute the `go get github.com/kleister/kleister-cli/cmd/kleister-cli` command, but we prefer to use our `Makefile`:
+Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). As this project relies on vendoring of the dependencies you have to use a Go version `>= 1.6`. It is also possible to just simply execute the `go get github.com/webhippie/errors/cmd/errors` command, but we prefer to use our `Makefile`:
 
 ```bash
-go get -d github.com/kleister/kleister-cli
-cd $GOPATH/src/github.com/kleister/kleister-cli
+go get -d github.com/webhippie/errors
+cd $GOPATH/src/github.com/webhippie/errors
 make clean retool sync build
 
 ./errors -h
