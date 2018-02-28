@@ -1,46 +1,38 @@
-# ownCloud: Errors
+# Errors
 
-[![Build Status](https://drone.owncloud.com/api/badges/owncloud-docker/errors/status.svg)](https://drone.owncloud.com/owncloud-docker/errors)
-[![](https://images.microbadger.com/badges/image/owncloud/errors.svg)](https://microbadger.com/images/owncloud/errors "Get your own image badge on microbadger.com")
-
-This is our Docker image used as a error page within our cluster to show a proper page, it is based on our [Ubuntu container](https://registry.hub.docker.com/u/owncloud/ubuntu/).
-
-
-## Build locally
-
-The available versions should be already pushed to the Docker Hub, but in case you want to try a change locally you can always execute the following command to get this image built locally:
-
-```
-docker build -t owncloud/errors:latest .
-```
+[![Build Status](http://github.dronehippie.de/api/badges/webhippie/errors/status.svg)](http://github.dronehippie.de/webhippie/errors)
+[![Stories in Ready](https://badge.waffle.io/webhippie/errors.svg?label=ready&title=Ready)](http://waffle.io/webhippie/errors)
+[![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie%3Amatrix.org-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8dbcb22838214efd940e75d2cffc31bc)](https://www.codacy.com/app/webhippie/errors?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=webhippie/errors&amp;utm_campaign=Badge_Grade)
+[![Go Doc](https://godoc.org/github.com/webhippie/errors?status.svg)](http://godoc.org/github.com/webhippie/errors)
+[![Go Report](http://goreportcard.com/badge/github.com/webhippie/errors)](http://goreportcard.com/report/github.com/webhippie/errors)
+[![](https://images.microbadger.com/badges/image/tboerger/errors.svg)](http://microbadger.com/images/tboerger/errors "Get your own image badge on microbadger.com")
 
 
-## Versions
-
-To get an overview about the available versions please take a look at the [GitHub branches](https://github.com/owncloud-docker/errors/branches/all) or our [Docker Hub tags](https://hub.docker.com/r/owncloud/errors/tags/), these lists are always up to date.
+This project simply provides customizeable default and error pages for your Nginx Ingress controller on a Kubernetes cluster.
 
 
-## Volumes
+## Install
 
-* N/A
-
-
-## Ports
-
-* 8080
+You can download prebuilt binaries from the GitHub releases or from our [download site](http://dl.webhippie.de/misc/errors). You are a Mac user? Just take a look at our [homebrew formula](https://github.com/webhippie/homebrew-webhippie).
 
 
-## Available environment variables
+## Development
 
-```
-ERRORS_ADDRESS 0.0.0.0:8080
-ERRORS_ASSETS /usr/share/errors
+Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). As this project relies on vendoring of the dependencies you have to use a Go version `>= 1.6`. It is also possible to just simply execute the `go get github.com/kleister/kleister-cli/cmd/kleister-cli` command, but we prefer to use our `Makefile`:
+
+```bash
+go get -d github.com/kleister/kleister-cli
+cd $GOPATH/src/github.com/kleister/kleister-cli
+make clean retool sync build
+
+./errors -h
 ```
 
 
-## Issues, Feedback and Ideas
+## Security
 
-Open an [Issue](https://github.com/owncloud-docker/errors/issues)
+If you find a security issue please contact thomas@webhippie.de first.
 
 
 ## Contributing
@@ -55,11 +47,11 @@ Fork -> Patch -> Push -> Pull Request
 
 ## License
 
-MIT
+Apache-2.0
 
 
 ## Copyright
 
 ```
-Copyright (c) 2018 Thomas Boerger <tboerger@owncloud.com>
+Copyright (c) 2018 Thomas Boerger <http://www.webhippie.de>
 ```
