@@ -1,0 +1,268 @@
+workspace:
+  base: /srv/app
+  path: src/github.com/webhippie/errors
+
+branches:
+  - master
+
+pipeline:
+  cache-restore:
+    image: plugins/s3-cache:1
+    pull: true
+    secrets: [ cache_s3_endpoint, cache_s3_access_key, cache_s3_secret_key ]
+    restore: true
+    when:
+      local: false
+
+  program-prepare:
+    image: webhippie/golang:edge
+    pull: true
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make clean
+      - make retool
+      - make sync
+      - make generate
+
+  program-vet:
+    image: webhippie/golang:edge
+    pull: true
+    group: app
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make vet
+
+  program-check:
+    image: webhippie/golang:edge
+    pull: true
+    group: app
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make megacheck
+
+  program-lint:
+    image: webhippie/golang:edge
+    pull: true
+    group: app
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make lint
+
+  program-test:
+    image: webhippie/golang:edge
+    pull: true
+    group: app
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make test
+
+  program-build:
+    image: webhippie/golang:edge
+    pull: true
+    group: app
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make build
+
+  program-coverage:
+    image: plugins/codacy:1
+    pull: true
+    secrets: [ codacy_token ]
+
+  program-windows:
+    image: karalabe/xgo-latest:latest
+    pull: true
+    group: release
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make release-dirs release-windows
+    when:
+      event: [ push, tag ]
+
+  program-linux:
+    image: karalabe/xgo-latest:latest
+    pull: true
+    group: release
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make release-dirs release-linux
+    when:
+      event: [ push, tag ]
+
+  program-darwin:
+    image: karalabe/xgo-latest:latest
+    pull: true
+    group: release
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make release-dirs release-darwin
+    when:
+      event: [ push, tag ]
+
+  program-finish:
+    image: webhippie/golang:edge
+    pull: true
+    environment:
+      - CGO_ENABLED=0
+      - GOPATH=/srv/app
+      - TAGS=
+    commands:
+      - make release-copy release-check
+    when:
+      event: [ push, tag ]
+
+  docker-linuxamd64:
+    image: plugins/docker:17.05
+    pull: true
+    group: docker
+    secrets: [ docker_username, docker_password ]
+    repo: kleister/kleister-cli
+    auto_tag: true
+    auto_tag_suffix: linux-amd64
+    when:
+      event: [push, tag]
+
+  docker-linuxi386:
+    image: plugins/docker:17.05
+    pull: true
+    group: docker
+    secrets: [ docker_username, docker_password ]
+    repo: kleister/kleister-cli
+    dockerfile: Dockerfile.i386
+    auto_tag: true
+    auto_tag_suffix: linux-i386
+    when:
+      event: [push, tag]
+
+  docker-linuxarm64:
+    image: plugins/docker:17.05
+    pull: true
+    group: docker
+    secrets: [ docker_username, docker_password ]
+    repo: kleister/kleister-cli
+    dockerfile: Dockerfile.arm64
+    auto_tag: true
+    auto_tag_suffix: linux-arm64
+    when:
+      event: [push, tag]
+
+  docker-linuxarm:
+    image: plugins/docker:17.05
+    pull: true
+    group: docker
+    secrets: [ docker_username, docker_password ]
+    repo: kleister/kleister-cli
+    dockerfile: Dockerfile.arm
+    auto_tag: true
+    auto_tag_suffix: linux-arm
+    when:
+      event: [push, tag]
+
+  docker-manifests:
+    image: plugins/manifest:1
+    pull: true
+    secrets: [ docker_username, docker_password ]
+    spec: manifest.yml
+    auto_tag: true
+    ignore_missing: true
+    when:
+      event: [ push, tag ]
+
+  docker-microbadger:
+    image: plugins/webhook:1
+    pull: true
+    secrets:
+      - source: microbadger_token
+        target: plugin_urls
+    when:
+      event: [ push, tag ]
+
+  cache-rebuild:
+    image: plugins/s3-cache:1
+    pull: true
+    secrets: [ cache_s3_endpoint, cache_s3_access_key, cache_s3_secret_key ]
+    rebuild: true
+    mount:
+      - _tools/bin
+      - _tools/pkg
+      - vendor
+    when:
+      local: false
+      event: [ push ]
+
+  cache-flush:
+    image: plugins/s3-cache:1
+    pull: true
+    secrets: [ cache_s3_endpoint, cache_s3_access_key, cache_s3_secret_key ]
+    flush: true
+    flush_age: 14
+    when:
+      local: false
+      event: [ push ]
+
+  archive-release:
+    image: plugins/s3:1
+    pull: true
+    secrets: [ s3_endpoint, aws_access_key_id, aws_secret_access_key, s3_bucket ]
+    source: dist/release/*
+    target: /misc/errors/master
+    strip_prefix: dist/release/
+    path_style: true
+    when:
+      event: [ push ]
+
+  archive-release:
+    image: plugins/s3:1
+    pull: true
+    secrets: [ s3_endpoint, aws_access_key_id, aws_secret_access_key, s3_bucket ]
+    source: dist/release/*
+    target: /misc/errors/${DRONE_TAG##v}
+    strip_prefix: dist/release/
+    path_style: true
+    when:
+      event: [ tag ]
+
+  github-release:
+    image: plugins/github-release:1
+    pull: true
+    secrets: [ github_token ]
+    files:
+      - dist/release/*
+    when:
+      event: [ tag ]
+
+  notify-matrix:
+    image: plugins/matrix:1
+    pull: true
+    secrets: [ matrix_roomid, matrix_username, matrix_password ]
+    when:
+      local: false
+      events: [ push, tag ]
+      status: [ changed, failure ]
