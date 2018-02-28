@@ -138,47 +138,47 @@ pipeline:
     when:
       event: [ push, tag ]
 
-  docker-linuxamd64:
+  docker-amd64:
     image: plugins/docker:17.05
     pull: true
     group: docker
     secrets: [ docker_username, docker_password ]
-    repo: kleister/kleister-cli
+    repo: tboerger/errors
     auto_tag: true
     auto_tag_suffix: linux-amd64
     when:
       event: [push, tag]
 
-  docker-linuxi386:
+  docker-i386:
     image: plugins/docker:17.05
     pull: true
     group: docker
     secrets: [ docker_username, docker_password ]
-    repo: kleister/kleister-cli
+    repo: tboerger/errors
     dockerfile: Dockerfile.i386
     auto_tag: true
     auto_tag_suffix: linux-i386
     when:
       event: [push, tag]
 
-  docker-linuxarm64:
+  docker-arm64:
     image: plugins/docker:17.05
     pull: true
     group: docker
     secrets: [ docker_username, docker_password ]
-    repo: kleister/kleister-cli
+    repo: tboerger/errors
     dockerfile: Dockerfile.arm64
     auto_tag: true
     auto_tag_suffix: linux-arm64
     when:
       event: [push, tag]
 
-  docker-linuxarm:
+  docker-arm:
     image: plugins/docker:17.05
     pull: true
     group: docker
     secrets: [ docker_username, docker_password ]
-    repo: kleister/kleister-cli
+    repo: tboerger/errors
     dockerfile: Dockerfile.arm
     auto_tag: true
     auto_tag_suffix: linux-arm
