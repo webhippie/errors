@@ -1,57 +1,58 @@
 # Errors
 
-[![Build Status](http://github.dronehippie.de/api/badges/webhippie/errors/status.svg)](http://github.dronehippie.de/webhippie/errors)
-[![Stories in Ready](https://badge.waffle.io/webhippie/errors.svg?label=ready&title=Ready)](http://waffle.io/webhippie/errors)
-[![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie%3Amatrix.org-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8dbcb22838214efd940e75d2cffc31bc)](https://www.codacy.com/app/webhippie/errors?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=webhippie/errors&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/webhippie/errors?status.svg)](http://godoc.org/github.com/webhippie/errors)
-[![Go Report](http://goreportcard.com/badge/github.com/webhippie/errors)](http://goreportcard.com/report/github.com/webhippie/errors)
-[![](https://images.microbadger.com/badges/image/tboerger/errors.svg)](http://microbadger.com/images/tboerger/errors "Get your own image badge on microbadger.com")
+[![Current Tag](https://img.shields.io/github/v/tag/webhippie/errors?sort=semver)](https://github.com/webhippie/errors) [![Build Status](https://github.com/webhippie/errors/actions/workflows/general.yml/badge.svg)](https://github.com/webhippie/errors/actions) [![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org) [![Docker Size](https://img.shields.io/docker/image-size/webhippie/errors/latest)](https://hub.docker.com/r/webhippie/errors) [![Docker Pulls](https://img.shields.io/docker/pulls/webhippie/errors)](https://hub.docker.com/r/webhippie/errors) [![Go Reference](https://pkg.go.dev/badge/github.com/webhippie/errors.svg)](https://pkg.go.dev/github.com/webhippie/errors) [![Go Report Card](https://goreportcard.com/badge/github.com/webhippie/errors)](https://goreportcard.com/report/github.com/webhippie/errors) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8dbcb22838214efd940e75d2cffc31bc)](https://www.codacy.com/gh/webhippie/errors/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=webhippie/errors&amp;utm_campaign=Badge_Grade)
 
-
-This project simply provides customizeable default and error pages for your Nginx Ingress controller on a Kubernetes cluster.
-
+This project simply provides customizeable default and error pages for your
+Nginx Ingress Controller on a Kubernetes cluster. By default it already ships
+with simple but nice pages for standard errors.
 
 ## Install
 
-You can download prebuilt binaries from the GitHub releases or from our [download site](http://dl.webhippie.de/misc/errors). You are a Mac user? Just take a look at our [homebrew formula](https://github.com/webhippie/homebrew-webhippie).
-
+You can download prebuilt binaries from our [GitHub releases][releases], or you
+can use our Docker images published on [Docker Hub][dockerhub] or [Quay][quay].
+If you need further guidance how to install this take a look at our
+[documentation][docs].
 
 ## Development
 
-Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). As this project relies on vendoring of the dependencies you have to use a Go version `>= 1.6`. It is also possible to just simply execute the `go get github.com/webhippie/errors/cmd/errors` command, but we prefer to use our `Makefile`:
+Make sure you have a working Go environment, for further reference or a guide
+take a look at the [install instructions][golang]. This project requires
+Go >= v1.17, at least that's the version we are using.
 
-```bash
-go get -d github.com/webhippie/errors
-cd $GOPATH/src/github.com/webhippie/errors
-make clean retool sync build
+```console
+git clone https://github.com/webhippie/errors.git
+cd errors
 
-./errors -h
+make generate build
+
+./bin/errors -h
 ```
-
 
 ## Security
 
-If you find a security issue please contact thomas@webhippie.de first.
-
+If you find a security issue please contact
+[thomas@webhippie.de](mailto:thomas@webhippie.de) first.
 
 ## Contributing
 
 Fork -> Patch -> Push -> Pull Request
 
-
 ## Authors
 
-* [Thomas Boerger](https://github.com/tboerger)
-
+-   [Thomas Boerger](https://github.com/tboerger)
 
 ## License
 
 Apache-2.0
 
-
 ## Copyright
 
+```console
+Copyright (c) 2018 Thomas Boerger <thomas@webhippie.de>
 ```
-Copyright (c) 2018 Thomas Boerger <http://www.webhippie.de>
-```
+
+[releases]: https://github.com/webhippie/errors/releases
+[dockerhub]: https://hub.docker.com/r/webhippie/errors/tags/
+[quay]: https://quay.io/repository/webhippie/errors?tab=tags
+[docs]: https://webhippie.github.io/errors/#getting-started
+[golang]: http://golang.org/doc/install.html

@@ -1,26 +1,19 @@
 package version
 
 import (
-	"fmt"
-
-	"github.com/coreos/go-semver/semver"
+	"runtime"
 )
 
 var (
-	// Compile is the compiled version
-	Compile = "0.0.0"
+	// String gets defined by the build system.
+	String = "0.0.0-dev"
 
-	// Commit indicates the current commit
-	Commit = "0000000"
+	// Revision indicates the commit this binary was built from.
+	Revision string
 
-	// Date indicates the build date
-	Date = "00000000"
+	// Date indicates the date this binary was built.
+	Date string
 
-	// Version represents the parsed version
-	Version *semver.Version
+	// Go running this binary.
+	Go = runtime.Version()
 )
-
-func init() {
-	Version = semver.New(Compile)
-	Version.Metadata = fmt.Sprintf("git%s.%s", Date, Commit)
-}
