@@ -3,15 +3,12 @@ RUN apk add --no-cache ca-certificates mailcap
 
 FROM scratch
 
-EXPOSE 8080
+EXPOSE 8080 8081
 VOLUME ["/var/lib/errors"]
 ENTRYPOINT ["/usr/bin/errors"]
 CMD ["server"]
 
-ENV ERRORS_ASSETS /usr/share/errors
-
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /etc/mime.types /etc/
 
-COPY assets/ /usr/share/errors/
 COPY bin/errors /usr/bin/errors
