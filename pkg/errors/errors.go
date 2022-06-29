@@ -4,9 +4,11 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 
 	"github.com/rs/zerolog/log"
 	"github.com/webhippie/errors/pkg/config"
+	"gopkg.in/yaml.v3"
 )
 
 var (
@@ -78,11 +80,29 @@ func Load(cfg *config.Config) List {
 			return defaultErrors
 		}
 
-		if err := json.Unmarshal(content, &result); err != nil {
+		switch ext := filepath.Ext(cfg.Server.Errors); ext {
+		case ".json":
+			if err := json.Unmarshal(content, &result); err != nil {
+				log.Error().
+					Err(err).
+					Str("file", cfg.Server.Errors).
+					Msg("Failed to parse custom errors")
+
+				return defaultErrors
+			}
+		case ".yaml":
+			if err := yaml.Unmarshal(content, &result); err != nil {
+				log.Error().
+					Err(err).
+					Str("file", cfg.Server.Errors).
+					Msg("Failed to parse custom errors")
+
+				return defaultErrors
+			}
+		default:
 			log.Error().
-				Err(err).
 				Str("file", cfg.Server.Errors).
-				Msg("Failed to parse custom errors")
+				Msg("Unknown file extension for custom errors")
 
 			return defaultErrors
 		}
