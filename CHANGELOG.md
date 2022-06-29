@@ -4,9 +4,17 @@ The following sections list the changes for unreleased.
 
 ## Summary
 
+ * Fix #15: Define errors in YAML format
  * Chg #14: Use Alpine base image and define healthcheck
 
 ## Details
+
+ * Bugfix #15: Define errors in YAML format
+
+   We had been parsing JSON files only which lead to issues if somebody tries to override the error
+   codes with a YAML file. We had to replace the document parser to handle that properly.
+
+   https://github.com/webhippie/errors/issues/15
 
  * Change #14: Use Alpine base image and define healthcheck
 
