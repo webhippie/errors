@@ -5,45 +5,38 @@
     <link>https://webhippie.github.io/errors/</link>
     <description>Recent content on Errors</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://webhippie.github.io/errors/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://webhippie.github.io/errors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://webhippie.github.io/errors/about/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://webhippie.github.io/errors/about/</guid>
       <description>This service provides handlers for a default backend which can be used within Kubernetes Ingress controllers like Nginx. It displayes nice error pages and it is customizable on all aspects.</description>
     </item>
-    
     <item>
       <title>Getting Started</title>
       <link>https://webhippie.github.io/errors/getting-started/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://webhippie.github.io/errors/getting-started/</guid>
       <description>Installation So far we are offering only a few different variants for the installation. You can choose between Docker or pre-built binaries which are stored on our download mirror and GitHub releases. Maybe we will also provide system packages for the major distributions later if we see the need for it.
 Docker Generally we are offering the images through quay.io/webhippie/errors and webhippie/errors, so feel free to choose one of the providers.</description>
     </item>
-    
     <item>
       <title>Building</title>
       <link>https://webhippie.github.io/errors/building/</link>
       <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://webhippie.github.io/errors/building/</guid>
       <description>As this project is built with Go you need to install Go first. The installation of Go is out of the scope of this document, please follow the official documentation. After the installation of Go you need to get the sources:
 git clone https://github.com/webhippie/errors.git cd errors/ All required tool besides Go itself are bundled by Go modules, all you need is part of the Makfile:
 make generate build Finally you should have the binary within the bin/ folder now, give it a try with .</description>
     </item>
-    
     <item>
       <title>License</title>
       <link>https://webhippie.github.io/errors/license/</link>
       <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://webhippie.github.io/errors/license/</guid>
       <description>This project is licensed under the Apache 2.0 license. For the license of the used libraries you have to check the respective sources.</description>
     </item>
-    
   </channel>
 </rss>
