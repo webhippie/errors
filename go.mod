@@ -3,7 +3,7 @@ module github.com/webhippie/errors
 go 1.19
 
 require (
-	github.com/go-chi/chi/v5 v5.0.13
+	github.com/go-chi/chi/v5 v5.0.14
 	github.com/joho/godotenv v1.5.1
 	github.com/oklog/run v1.1.0
 	github.com/prometheus/client_golang v1.19.1
