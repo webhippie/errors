@@ -50,14 +50,14 @@ func Load(cfg *config.Config) http.Handler {
 			root.Mount("/debug", middleware.Profiler())
 		}
 
-		root.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
 			io.WriteString(w, http.StatusText(http.StatusOK))
 		})
 
-		root.Get("/readyz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/readyz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
@@ -88,14 +88,14 @@ func Metrics(cfg *config.Config) http.Handler {
 	mux.Route("/", func(root chi.Router) {
 		root.Get("/metrics", prometheus.Handler(cfg.Metrics.Token))
 
-		root.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
 			io.WriteString(w, http.StatusText(http.StatusOK))
 		})
 
-		root.Get("/readyz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/readyz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
