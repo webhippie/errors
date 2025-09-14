@@ -2,12 +2,12 @@ package router
 
 import (
 	"crypto/tls"
-	"io"
 	"net/http"
 	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/render"
 	"github.com/rs/zerolog/hlog"
 	"github.com/rs/zerolog/log"
 	"github.com/webhippie/errors/pkg/config"
@@ -50,18 +50,14 @@ func Load(cfg *config.Config) http.Handler {
 			root.Mount("/debug", middleware.Profiler())
 		}
 
-		root.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
-			w.Header().Set("Content-Type", "text/plain")
-			w.WriteHeader(http.StatusOK)
-
-			io.WriteString(w, http.StatusText(http.StatusOK))
+		root.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+			render.Status(r, http.StatusOK)
+			render.PlainText(w, r, http.StatusText(http.StatusOK))
 		})
 
-		root.Get("/readyz", func(w http.ResponseWriter, _ *http.Request) {
-			w.Header().Set("Content-Type", "text/plain")
-			w.WriteHeader(http.StatusOK)
-
-			io.WriteString(w, http.StatusText(http.StatusOK))
+		root.Get("/readyz", func(w http.ResponseWriter, r *http.Request) {
+			render.Status(r, http.StatusOK)
+			render.PlainText(w, r, http.StatusText(http.StatusOK))
 		})
 	})
 
@@ -88,18 +84,14 @@ func Metrics(cfg *config.Config) http.Handler {
 	mux.Route("/", func(root chi.Router) {
 		root.Get("/metrics", prometheus.Handler(cfg.Metrics.Token))
 
-		root.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
-			w.Header().Set("Content-Type", "text/plain")
-			w.WriteHeader(http.StatusOK)
-
-			io.WriteString(w, http.StatusText(http.StatusOK))
+		root.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+			render.Status(r, http.StatusOK)
+			render.PlainText(w, r, http.StatusText(http.StatusOK))
 		})
 
-		root.Get("/readyz", func(w http.ResponseWriter, _ *http.Request) {
-			w.Header().Set("Content-Type", "text/plain")
-			w.WriteHeader(http.StatusOK)
-
-			io.WriteString(w, http.StatusText(http.StatusOK))
+		root.Get("/readyz", func(w http.ResponseWriter, r *http.Request) {
+			render.Status(r, http.StatusOK)
+			render.PlainText(w, r, http.StatusText(http.StatusOK))
 		})
 	})
 
