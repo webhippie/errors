@@ -49,14 +49,16 @@ func Load(cfg *config.Config) *template.Template {
 			return err
 		}
 
-		tpls.New(
+		if _, err := tpls.New(
 			strings.TrimPrefix(
 				d.Name(),
 				"dist/",
 			),
 		).Parse(
 			string(content),
-		)
+		); err != nil {
+			return err
+		}
 
 		return nil
 	})
@@ -97,7 +99,7 @@ func Load(cfg *config.Config) *template.Template {
 				return err
 			}
 
-			tpls.New(
+			if _, err := tpls.New(
 				strings.TrimPrefix(
 					strings.TrimPrefix(
 						d.Name(),
@@ -107,7 +109,9 @@ func Load(cfg *config.Config) *template.Template {
 				),
 			).Parse(
 				string(content),
-			)
+			); err != nil {
+				return err
+			}
 
 			return nil
 		})

@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"io"
 	"mime"
 	"net/http"
 	"path"
@@ -10,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/go-chi/render"
 	"github.com/rs/zerolog/log"
 	"github.com/webhippie/errors/pkg/config"
 	"github.com/webhippie/errors/pkg/errors"
@@ -21,11 +21,11 @@ import (
 func General(cfg *config.Config) http.HandlerFunc {
 	availableErrors := errors.Load(cfg)
 
-	return func(w http.ResponseWriter, req *http.Request) {
-		defer handleMetrics(time.Now(), req.ProtoMajor, req.ProtoMinor)
+	return func(w http.ResponseWriter, r *http.Request) {
+		defer handleMetrics(time.Now(), r.ProtoMajor, r.ProtoMinor)
 
-		code := detectCode(req)
-		format := detectFormat(req)
+		code := detectCode(r)
+		format := detectFormat(r)
 		file := parseFormat(format)
 
 		w.Header().Set("Content-Type", format)
@@ -50,7 +50,8 @@ func General(cfg *config.Config) http.HandlerFunc {
 				Str("template", file).
 				Msg("Failed to execute template")
 
-			io.WriteString(w, http.StatusText(code))
+			render.Status(r, code)
+			render.PlainText(w, r, http.StatusText(code))
 		}
 	}
 }
