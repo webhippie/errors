@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.1](https://github.com/webhippie/errors/compare/v2.1.0...v2.1.1) (2025-10-13)
+
+
+### Bugfixes
+
+* **deps:** update docker digests ([#176](https://github.com/webhippie/errors/issues/176)) ([59e24bb](https://github.com/webhippie/errors/commit/59e24bb01cf11d0562fd159c34383b0651ed1d47))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0134653 ([#178](https://github.com/webhippie/errors/issues/178)) ([d7a569d](https://github.com/webhippie/errors/commit/d7a569d22b9efdeca18c305df26188d439c4e51b))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0ae17b3 ([#180](https://github.com/webhippie/errors/issues/180)) ([ef830e7](https://github.com/webhippie/errors/commit/ef830e74e520a07882433d31f1058bc136e90534))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 7300a8d ([#177](https://github.com/webhippie/errors/issues/177)) ([744bede](https://github.com/webhippie/errors/commit/744bedea1e0606f4bebb9d3ce416bd9857e1a7ee))
+* **patch:** update golang docker tag to v1.25.2 ([#175](https://github.com/webhippie/errors/issues/175)) ([7d6fed7](https://github.com/webhippie/errors/commit/7d6fed702bea45e9a1df95fe00c6c8d3febd5a81))
+
 ## [2.1.0](https://github.com/webhippie/errors/compare/v2.0.0...v2.1.0) (2025-09-22)
 
 
