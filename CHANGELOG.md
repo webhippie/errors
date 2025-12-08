@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.3.0](https://github.com/webhippie/errors/compare/v2.2.2...v2.3.0) (2025-12-08)
+
+
+### Features
+
+* **minor:** update alpine docker tag to v3.23 ([#209](https://github.com/webhippie/errors/issues/209)) ([524e8a6](https://github.com/webhippie/errors/commit/524e8a61200bb506791711c7f2e21b5724ccaaf1))
+* **minor:** update module github.com/golangci/golangci-lint/v2 to v2.7.0 ([#208](https://github.com/webhippie/errors/issues/208)) ([c1bc0a5](https://github.com/webhippie/errors/commit/c1bc0a5c948b19944a2ca97e498b7b6643e0f695))
+
+
+### Bugfixes
+
+* **patch:** update golang docker tag to v1.25.5 ([#206](https://github.com/webhippie/errors/issues/206)) ([016282d](https://github.com/webhippie/errors/commit/016282d9ddcfae26433b3dc24a5dc96bbd30077a))
+* **patch:** update module github.com/spf13/cobra to v1.10.2 ([#210](https://github.com/webhippie/errors/issues/210)) ([78107ed](https://github.com/webhippie/errors/commit/78107ed3e379e171137f2bd0db204fee62a8ddc9))
+
 ## [2.2.2](https://github.com/webhippie/errors/compare/v2.2.1...v2.2.2) (2025-11-17)
 
 
