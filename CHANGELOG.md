@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.1](https://github.com/webhippie/errors/compare/v2.3.0...v2.3.1) (2025-12-22)
+
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 865b95f ([#219](https://github.com/webhippie/errors/issues/219)) ([d99948d](https://github.com/webhippie/errors/commit/d99948dcf93b6891d1900aeb62ddb8d2d85a7313))
+* **deps:** update alpine:3.23 docker digest to be171b5 ([#218](https://github.com/webhippie/errors/issues/218)) ([685f01a](https://github.com/webhippie/errors/commit/685f01a0f22268c7f5ef3feb67c8e97ff54ff37d))
+
 ## [2.3.0](https://github.com/webhippie/errors/compare/v2.2.2...v2.3.0) (2025-12-08)
 
 
