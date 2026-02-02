@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.3](https://github.com/webhippie/errors/compare/v2.3.2...v2.3.3) (2026-02-02)
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 2510918 ([#230](https://github.com/webhippie/errors/issues/230)) ([7b45033](https://github.com/webhippie/errors/commit/7b450337c69da245069f7b45fcef9882a067f481))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([c31ce10](https://github.com/webhippie/errors/commit/c31ce107ca12d413326a2e4365c9287045947d98))
+* **flake:** updated lockfile [skip ci] ([9d314f4](https://github.com/webhippie/errors/commit/9d314f447982abf92632307238fbabd9560ffec7))
+
 ## [2.3.2](https://github.com/webhippie/errors/compare/v2.3.1...v2.3.2) (2026-01-19)
 
 ### Dependencies
