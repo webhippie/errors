@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.4.0](https://github.com/webhippie/errors/compare/v2.3.4...v2.4.0) (2026-03-30)
+
+### Dependencies
+
+* **minor:** update module github.com/rs/zerolog to v1.35.0 ([#243](https://github.com/webhippie/errors/issues/243)) ([e257ed0](https://github.com/webhippie/errors/commit/e257ed0f701ffa442fe7c43ff3f3d64d7ab1a030))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([8aa71b0](https://github.com/webhippie/errors/commit/8aa71b01493873835d47533c85b0640ddc0a4c41))
+* **flake:** updated lockfile [skip ci] ([ecd6846](https://github.com/webhippie/errors/commit/ecd6846e94ad79ac7b2b727c238e5fa41e702124))
+* **flake:** updated lockfile [skip ci] ([5ac6bc3](https://github.com/webhippie/errors/commit/5ac6bc3b0c0038aa12d553e01c9dd2fbd1fc6b99))
+* **flake:** updated lockfile [skip ci] ([32e1d0c](https://github.com/webhippie/errors/commit/32e1d0c3fd6133a349906d4eacdfea044ab25076))
+* **flake:** updated lockfile [skip ci] ([6575a1f](https://github.com/webhippie/errors/commit/6575a1f74a6e273a2d80d0097e5237b069d74ddd))
+* **flake:** updated lockfile [skip ci] ([89db147](https://github.com/webhippie/errors/commit/89db1471f2cdfd9bdb51b95ac4469e5c7ef4c86f))
+* **flake:** updated lockfile [skip ci] ([240be68](https://github.com/webhippie/errors/commit/240be68e736fb117c3874f849f7d62c1e5db633f))
+
 ## [2.3.4](https://github.com/webhippie/errors/compare/v2.3.3...v2.3.4) (2026-02-09)
 
 ### Dependencies
