@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.5.0](https://github.com/webhippie/errors/compare/v2.4.2...v2.5.0) (2026-05-25)
+
+### Features
+
+* upgrade build process to go 1.25 ([a8e3daa](https://github.com/webhippie/errors/commit/a8e3daacfcc75882c2baec00b958abee3b2d90a7))
+* upgrade required go version to 1.26 ([7fcf899](https://github.com/webhippie/errors/commit/7fcf899b210ec86b65df7d0c96aaa4efa8f01b55))
+
+### Dependencies
+
+* **minor:** update golang docker tag to v1.26.3 ([#252](https://github.com/webhippie/errors/issues/252)) ([05cad42](https://github.com/webhippie/errors/commit/05cad4202041cf9427874cd324e1cc8ca56191bc))
+* **minor:** update module github.com/go-chi/chi/v5 to v5.3.0 ([#250](https://github.com/webhippie/errors/issues/250)) ([f9940ff](https://github.com/webhippie/errors/commit/f9940ff8e4c05e3b33c8d41e97abf7f7f091f372))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([78138ba](https://github.com/webhippie/errors/commit/78138ba4ae3dcfe6921ac9de618ea9bd4f895ce1))
+* **flake:** updated lockfile [skip ci] ([ffbb502](https://github.com/webhippie/errors/commit/ffbb5028f9b849826ad0a30a17ed61875b80502b))
+* **flake:** updated lockfile [skip ci] ([23e84d7](https://github.com/webhippie/errors/commit/23e84d7e45d130ae6482a1a3ab5c3a2dc5e42d52))
+* **flake:** updated lockfile [skip ci] ([b8c6a6b](https://github.com/webhippie/errors/commit/b8c6a6bd2d5ab40831b2449627b35eb2aa62719f))
+* replace nixfmt package ([229ce06](https://github.com/webhippie/errors/commit/229ce061d9444e3ad6bfef4b8aad0eeb0ff2c1c7))
+* update option casing for revive ([c4b1709](https://github.com/webhippie/errors/commit/c4b17091b4e774063ca019f09d341a4a5565a7cf))
+
 ## [2.4.2](https://github.com/webhippie/errors/compare/v2.4.1...v2.4.2) (2026-04-27)
 
 ### Dependencies
