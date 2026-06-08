@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.5.1](https://github.com/webhippie/errors/compare/v2.5.0...v2.5.1) (2026-06-08)
+
+### Dependencies
+
+* **patch:** update golang docker tag to v1.26.4 ([#254](https://github.com/webhippie/errors/issues/254)) ([948d4cb](https://github.com/webhippie/errors/commit/948d4cbc14b0c6a7f4e2f3fdb38ac2bc7794a175))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([090ea04](https://github.com/webhippie/errors/commit/090ea04ddaf152ea0efff5a8283d5af8428be31d))
+* **flake:** updated lockfile [skip ci] ([424e05b](https://github.com/webhippie/errors/commit/424e05b819df34edf26bab6b9f1e4f1e7b7b02a6))
+
 ## [2.5.0](https://github.com/webhippie/errors/compare/v2.4.2...v2.5.0) (2026-05-25)
 
 ### Features
