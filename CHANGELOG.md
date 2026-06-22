@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.1](https://github.com/webhippie/errors/compare/v2.6.0...v2.6.1) (2026-06-22)
+
+### Bugfixes
+
+* **deps:** update docker digests ([#259](https://github.com/webhippie/errors/issues/259)) ([907154b](https://github.com/webhippie/errors/commit/907154b9e30d7468e5a22f69e051a2f7d269644d))
+* **deps:** update docker digests ([#260](https://github.com/webhippie/errors/issues/260)) ([39ef6ac](https://github.com/webhippie/errors/commit/39ef6acaa7a1da13da0d7744737865089ace7659))
+* **deps:** update docker digests ([#261](https://github.com/webhippie/errors/issues/261)) ([26eef3b](https://github.com/webhippie/errors/commit/26eef3b3d9f9e33e802999b7ba0a13500a3fa2cb))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([6a1f3bf](https://github.com/webhippie/errors/commit/6a1f3bf8c0a8e23a31dd57d270ee02f03b132115))
+
 ## [2.6.0](https://github.com/webhippie/errors/compare/v2.5.1...v2.6.0) (2026-06-15)
 
 ### Bugfixes
