@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.8.1](https://github.com/webhippie/errors/compare/v2.8.0...v2.8.1) (2026-08-17)
+
 ## [2.8.0](https://github.com/webhippie/errors/compare/v2.7.0...v2.8.0) (2026-08-03)
 
 ## [2.7.0](https://github.com/webhippie/errors/compare/v2.6.2...v2.7.0) (2026-07-27)
