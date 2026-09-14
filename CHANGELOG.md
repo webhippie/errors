@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.9.0](https://github.com/webhippie/errors/compare/v2.8.1...v2.9.0) (2026-09-14)
+
+### Features
+
+* restructure repo and build processes ([692669b](https://github.com/webhippie/errors/commit/692669b9957fea7f7e50abb4bff1a81e5042b3c2))
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to cf6fca6 ([#284](https://github.com/webhippie/errors/issues/284)) ([030b08a](https://github.com/webhippie/errors/commit/030b08ae740e37fc65b786d48bcf1f8b934d020b))
+* drop deprecated PreferServerCipherSuites attribute ([bc68761](https://github.com/webhippie/errors/commit/bc687613750a8789b370c9dfcfd3c777fd3eff82))
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.26.0 ([#285](https://github.com/webhippie/errors/issues/285)) ([4c420de](https://github.com/webhippie/errors/commit/4c420de3c9cdcdfb06c38752ef317f67154bbd84))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.27.0 ([#287](https://github.com/webhippie/errors/issues/287)) ([ad13266](https://github.com/webhippie/errors/commit/ad13266b1fd68e21d60af96db2317f2113aca3f6))
+* **minor:** update dependency hugo-extended to v0.166.0 ([#288](https://github.com/webhippie/errors/issues/288)) ([20a3827](https://github.com/webhippie/errors/commit/20a3827e473fd762a7f697795dbb1b5586e19b64))
+* **minor:** update dependency task to v3.53.1 ([#286](https://github.com/webhippie/errors/issues/286)) ([4a03193](https://github.com/webhippie/errors/commit/4a0319369ffb71a8f8ae439611722e368c848e7e))
+* **minor:** update golang docker tag to v1.27.0 ([#279](https://github.com/webhippie/errors/issues/279)) ([730fbc6](https://github.com/webhippie/errors/commit/730fbc60bf2d62dcd01e6094651e983361d1a8b0))
+* **minor:** update module github.com/stretchr/testify to v1.12.0 ([#277](https://github.com/webhippie/errors/issues/277)) ([d659f08](https://github.com/webhippie/errors/commit/d659f08657986c4e15dc742c5a35c28eda1052fa))
+* **patch:** update dependency prek to v0.5.3 ([#289](https://github.com/webhippie/errors/issues/289)) ([8cab0a3](https://github.com/webhippie/errors/commit/8cab0a33cf04f73030e08c6f903a1345ac1220a4))
+* **patch:** update golang docker tag to v1.27.1 ([#283](https://github.com/webhippie/errors/issues/283)) ([212df79](https://github.com/webhippie/errors/commit/212df795d6de0e4dc432d9a5a129648c49f6e090))
+* **patch:** update module github.com/go-chi/chi/v5 to v5.3.2 ([#280](https://github.com/webhippie/errors/issues/280)) ([e665a72](https://github.com/webhippie/errors/commit/e665a7259cba61896570e81df322e5c0f712224d))
+* **patch:** update module github.com/stretchr/testify to v1.12.1 ([#278](https://github.com/webhippie/errors/issues/278)) ([7f68a52](https://github.com/webhippie/errors/commit/7f68a529a7f2e8d840dcecca96acbd2651743353))
+
 ## [2.8.1](https://github.com/webhippie/errors/compare/v2.8.0...v2.8.1) (2026-08-17)
 
 ## [2.8.0](https://github.com/webhippie/errors/compare/v2.7.0...v2.8.0) (2026-08-03)
