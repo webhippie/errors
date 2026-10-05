@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.9.2](https://github.com/webhippie/errors/compare/v2.9.1...v2.9.2) (2026-10-05)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to 8a5910f ([#294](https://github.com/webhippie/errors/issues/294)) ([6c62b09](https://github.com/webhippie/errors/commit/6c62b09e2772625207ae5568fbaf9bf9e076d9eb))
+
+### Dependencies
+
+* **mise:** update dependency golangci-lint to v2.14.0 ([#295](https://github.com/webhippie/errors/issues/295)) ([a0b5aaa](https://github.com/webhippie/errors/commit/a0b5aaafd987965fb3a6cedc1fdc024e6fa43852))
+* **mise:** update dependency hugo-extended to v0.167.0 ([#298](https://github.com/webhippie/errors/issues/298)) ([dd59cfa](https://github.com/webhippie/errors/commit/dd59cfacd38ff016a40b5afed4820b456ecf3ec6))
+* **mise:** update dependency prek to v0.5.4 ([#297](https://github.com/webhippie/errors/issues/297)) ([b0c364b](https://github.com/webhippie/errors/commit/b0c364bb63e936d85aa2df2556ca6f87998be770))
+* **mise:** update dependency prek to v0.5.5 ([#301](https://github.com/webhippie/errors/issues/301)) ([f815420](https://github.com/webhippie/errors/commit/f815420ec9077962de342e6b2face09df2f740de))
+* **mise:** update dependency task to v3.54.0 ([#300](https://github.com/webhippie/errors/issues/300)) ([9402c9e](https://github.com/webhippie/errors/commit/9402c9e6446d176b1cb9f5bdbdb9e359bef66ac8))
+
 ## [2.9.1](https://github.com/webhippie/errors/compare/v2.9.0...v2.9.1) (2026-09-21)
 
 ### Bugfixes
