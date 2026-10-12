@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.10.0](https://github.com/webhippie/errors/compare/v2.9.2...v2.10.0) (2026-10-12)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.2-alpine docker digest to f92b6ef ([#307](https://github.com/webhippie/errors/issues/307)) ([d8b30ff](https://github.com/webhippie/errors/commit/d8b30ff620ab386d34bdf52bed3951d398da7e42))
+
+### Dependencies
+
+* **minor:** update module github.com/go-chi/chi/v5 to v5.4.0 ([#308](https://github.com/webhippie/errors/issues/308)) ([e83015c](https://github.com/webhippie/errors/commit/e83015ce7ec37b7858d9a52a4abe53c78cbd0653))
+* **minor:** update module github.com/prometheus/client_golang to v1.25.0 ([#303](https://github.com/webhippie/errors/issues/303)) ([3374e2a](https://github.com/webhippie/errors/commit/3374e2a604c0d9ce27504518a3c626d3daa99c3c))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.28.0 ([#302](https://github.com/webhippie/errors/issues/302)) ([5e08f35](https://github.com/webhippie/errors/commit/5e08f35051a309415f6af0eb5fb3582c00b90b1e))
+* **mise:** update dependency go to v1.27.2 ([#304](https://github.com/webhippie/errors/issues/304)) ([07a6fd8](https://github.com/webhippie/errors/commit/07a6fd8f5da7bdf78514b59eb51abd3648252516))
+* **mise:** update dependency goreleaser to v2.18.3 ([#306](https://github.com/webhippie/errors/issues/306)) ([c20b702](https://github.com/webhippie/errors/commit/c20b702912a8f0a1554ab5c1050f9d347667e538))
+* **patch:** update golang docker tag to v1.27.2 ([#305](https://github.com/webhippie/errors/issues/305)) ([f948a0d](https://github.com/webhippie/errors/commit/f948a0d165ffd46f36326d5c58440404f07bae38))
+
 ## [2.9.2](https://github.com/webhippie/errors/compare/v2.9.1...v2.9.2) (2026-10-05)
 
 ### Bugfixes
