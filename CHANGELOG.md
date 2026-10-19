@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.11.0](https://github.com/webhippie/errors/compare/v2.10.0...v2.11.0) (2026-10-19)
+
+### Dependencies
+
+* **minor:** update module github.com/go-chi/chi/v5 to v5.5.0 ([#311](https://github.com/webhippie/errors/issues/311)) ([f610405](https://github.com/webhippie/errors/commit/f6104057e70da521b648cb9c913e491d026333c6))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.29.0 ([#312](https://github.com/webhippie/errors/issues/312)) ([c33ac54](https://github.com/webhippie/errors/commit/c33ac54cb2ad25867669aa7e3514f01fe9606a0f))
+* **mise:** update dependency golangci-lint to v2.15.0 ([#313](https://github.com/webhippie/errors/issues/313)) ([5726388](https://github.com/webhippie/errors/commit/5726388c9f487be0ae08a5c1b77c70d28ebb8ec6))
+* **mise:** update dependency hugo-extended to v0.168.0 ([#310](https://github.com/webhippie/errors/issues/310)) ([86082fb](https://github.com/webhippie/errors/commit/86082fbec3d14fdd96a3e0c25add920608d345ce))
+* **mise:** update dependency prek to v0.5.6 ([#314](https://github.com/webhippie/errors/issues/314)) ([7e7e522](https://github.com/webhippie/errors/commit/7e7e5224ea69f212ea1795a8aa90b87ef17223c0))
+
 ## [2.10.0](https://github.com/webhippie/errors/compare/v2.9.2...v2.10.0) (2026-10-12)
 
 ### Bugfixes
