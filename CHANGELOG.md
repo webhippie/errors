@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.11.1](https://github.com/webhippie/errors/compare/v2.11.0...v2.11.1) (2026-10-26)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to 71e9b7b ([#322](https://github.com/webhippie/errors/issues/322)) ([b9b98c1](https://github.com/webhippie/errors/commit/b9b98c1e1bcb85515db634ca31c6f7b43bfbc4fa))
+* **deps:** update alpine:3.24 docker digest to be26560 ([#326](https://github.com/webhippie/errors/issues/326)) ([557e57f](https://github.com/webhippie/errors/commit/557e57fda9a6a7ce505eb22e633147255bd6f4ab))
+* **deps:** update alpine:3.24 docker digest to c6b073f ([#320](https://github.com/webhippie/errors/issues/320)) ([6c8ea3e](https://github.com/webhippie/errors/commit/6c8ea3e6090ee69da875d2f5e095750abada396e))
+* **deps:** update golang:1.27.3-alpine docker digest to b8c9b82 ([#323](https://github.com/webhippie/errors/issues/323)) ([0cde8c7](https://github.com/webhippie/errors/commit/0cde8c721aca3d91eb808dd3951f0d1ab4eb874d))
+* **deps:** update golang:1.27.3-alpine docker digest to d530cf6 ([#321](https://github.com/webhippie/errors/issues/321)) ([d45b17b](https://github.com/webhippie/errors/commit/d45b17b027cb0014d0fc01d20250d28261b2d081))
+
+### Dependencies
+
+* **mise:** update dependency cosign to v3.1.4 ([#318](https://github.com/webhippie/errors/issues/318)) ([ee8884a](https://github.com/webhippie/errors/commit/ee8884afd93c08e247ccedff804100418a1b4f79))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.30.0 ([#324](https://github.com/webhippie/errors/issues/324)) ([1eff500](https://github.com/webhippie/errors/commit/1eff50034dbea5d6532cfe90b1f8977618688a8a))
+* **mise:** update dependency go to v1.27.3 ([#316](https://github.com/webhippie/errors/issues/316)) ([fc213b5](https://github.com/webhippie/errors/commit/fc213b5368abcbd2e737cacac8c3d51c4b7d74dd))
+* **mise:** update dependency goreleaser to v2.19.0 ([#325](https://github.com/webhippie/errors/issues/325)) ([b4dbe10](https://github.com/webhippie/errors/commit/b4dbe10e2b9067f8c78208b81a7937167a9998ba))
+* **mise:** update dependency prek to v0.5.7 ([#319](https://github.com/webhippie/errors/issues/319)) ([a225f25](https://github.com/webhippie/errors/commit/a225f252ab4974d37b2b67ff8f4a38019be88c7e))
+* **patch:** update golang docker tag to v1.27.3 ([a465c73](https://github.com/webhippie/errors/commit/a465c730d743c5e96f215241415ac886b9b1b5d0))
+
 ## [2.11.0](https://github.com/webhippie/errors/compare/v2.10.0...v2.11.0) (2026-10-19)
 
 ### Dependencies
