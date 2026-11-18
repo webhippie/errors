@@ -1,0 +1,41 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/hugo.json
+baseURL: https://webhippie.github.io/errors/
+locale: en-us
+title: Errors
+pygmentsUseClasses: true
+enableRobotsTXT: true
+
+disableKinds:
+  - rss
+  - sitemap
+  - taxonomy
+  - term
+  - section
+
+cascade:
+  - build:
+      render: never
+      list: always
+    target:
+      kind: page
+
+blackfriday:
+  angledQuotes: true
+  fractions: false
+  plainIDAnchors: true
+  smartlists: true
+  extensions:
+    - hardLineBreak
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  author: Thomas Boerger
+  description: Default backend for Kubernetes Ingress
+  keywords: error, pages, kubernetes, ingress
+
+...
